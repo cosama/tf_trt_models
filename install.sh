@@ -9,6 +9,7 @@ for arg do
   shift
   case $arg in
     develop) INSTALL="develop";;
+    install) INSTALL="install";;
     *python*) PYTHON=$arg;;
     *) set -- "$@" "$arg";;
   esac

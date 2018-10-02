@@ -24,15 +24,15 @@ echo $PWD
 echo "Installing object detection library"
 echo $PROTOC
 $PROTOC object_detection/protos/*.proto --python_out=.
-$PYTHON setup.py install --user
+$PYTHON setup.py install $@
 popd
 
 pushd $MODELS_DIR/research/slim
 echo $PWD
 echo "Installing slim library"
-$PYTHON setup.py install --user
+$PYTHON setup.py install $@
 popd
 
 echo "Installing tf_trt_models"
 echo $PWD
-$PYTHON setup.py install --user
+$PYTHON setup.py install $@
